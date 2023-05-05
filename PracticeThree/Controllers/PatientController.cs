@@ -1,13 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using UPB.CoreLogic.Models;
 using UPB.CoreLogic.Managers;
+using Microsoft.Extensions.Configuration;
 namespace UPB.PracticeThree.Controllers;
+
 
 [ApiController]
 [Route("[controller]")]
 public class PatientController : ControllerBase
 {
     private readonly PatientManager _patientManager;
+    private readonly IConfiguration _config;
     public PatientController(PatientManager patientManager){
         _patientManager = patientManager;
     }
