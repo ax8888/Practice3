@@ -33,7 +33,8 @@ builder.Services.AddSwaggerGen(options =>
 //Serilog
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
-    .CreateBootstrapLogger();
+    .WriteTo.Console(outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}")
+    .CreateLogger();
 
 builder.Host.UseSerilog();
 
@@ -43,6 +44,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment() || app.Environment.EnvironmentName == "QA" ||
 app.Environment.EnvironmentName == "UAT")
 {
+    Log.Information("Using Swagger");
     app.UseSwagger();
     app.UseSwaggerUI();
 }
