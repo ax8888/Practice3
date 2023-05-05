@@ -1,4 +1,4 @@
-namespace PracticeThree;
+namespace PracticeThree.Models;
 
 
 public class Patient{
