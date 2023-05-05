@@ -1,6 +1,6 @@
 using Microsoft.OpenApi.Models;
 using Serilog;
-using PracticeThree.Managers;
+using UPB.CoreLogic.Managers;
 
 
 var builder = WebApplication.CreateBuilder(args);

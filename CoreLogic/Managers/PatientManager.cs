@@ -1,4 +1,4 @@
-using PracticeThree.Models;
+using CoreLogic.Models;
 
 namespace PracticeThree.Managers;
 

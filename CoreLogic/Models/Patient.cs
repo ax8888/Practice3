@@ -1,4 +1,4 @@
-namespace PracticeThree.Models;
+namespace CoreLogic.Models;
 
 
 public class Patient{

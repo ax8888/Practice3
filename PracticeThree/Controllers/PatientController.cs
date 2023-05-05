@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using PracticeThree.Models;
-using PracticeThree.Managers;
-namespace PracticeThree.Controllers;
+using UPB.CoreLogic.Models;
+using UPB.CoreLogic.Managers;
+namespace UPB.PracticeThree.Controllers;
 
 [ApiController]
 [Route("[controller]")]
