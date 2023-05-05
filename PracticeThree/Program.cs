@@ -1,9 +1,12 @@
 using Microsoft.OpenApi.Models;
 using Serilog;
+using PracticeThree.Managers;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<PatientManager>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

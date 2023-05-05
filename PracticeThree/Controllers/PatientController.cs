@@ -7,9 +7,9 @@ namespace PracticeThree.Controllers;
 [Route("[controller]")]
 public class PatientController : ControllerBase
 {
-    PatientManager _patientManager;
-    public PatientController(){
-        _patientManager = new PatientManager();
+    private readonly PatientManager _patientManager;
+    public PatientController(PatientManager patientManager){
+        _patientManager = patientManager;
     }
 
     [HttpGet]
